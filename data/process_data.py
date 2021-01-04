@@ -56,12 +56,6 @@ def clean_data(df):
     df = df.loc[df["duplicate"] == False]
     df = df.drop(columns="duplicate")
 
-    # Drops column "original" as it is not relevant for text classification
-    df = df.drop(columns="original")
-    
-    # Drops column "child_alone" as it contains only "0" as value
-    df = df.drop(columns="child_alone")
-    
     return df
 
 

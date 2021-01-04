@@ -182,7 +182,7 @@ n_categories_df = pd.read_sql_table('n_categories_df', engine)
 n_categories = n_categories_df["count"].tolist()
 
 # Categories by occurence
-df_categories = df.iloc[:, 3:-1]
+df_categories = df.iloc[:, 4:-1]
 category_count_df = pd.DataFrame(df_categories.apply(pd.Series.value_counts).iloc[1, :]).sort_values(by=1, ascending=False)
 
 # Word lengths

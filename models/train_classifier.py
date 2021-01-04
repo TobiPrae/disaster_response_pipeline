@@ -131,8 +131,8 @@ def load_data(database_filepath):
     engine = create_engine(F'sqlite:///{database_filepath}')
     df = pd.read_sql_table('cleaned_messages', engine)
     X = df["message"].values
-    Y = df[df.iloc[:, 3:].columns].values
-    category_names =df.iloc[:, 3:].columns.tolist()
+    Y = df[df.iloc[:, 4:].columns].values
+    category_names =df.iloc[:, 4:].columns.tolist()
     
     return X, Y, category_names
 
@@ -186,7 +186,7 @@ def build_model():
         'clf__estimator__base_estimator': [DecisionTreeClassifier(max_depth=1), DecisionTreeClassifier(max_depth=3)],
     }
 
-    cv = GridSearchCV(pipeline, parameters, n_jobs=-1, cv=3, verbose=10)
+    cv = GridSearchCV(pipeline, parameters, n_jobs=-1, cv=5, verbose=10)
     
     return cv
     

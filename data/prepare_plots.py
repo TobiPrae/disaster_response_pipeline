@@ -8,7 +8,7 @@ def main():
     
     # Get data
     print("...load data")
-    engine = create_engine('sqlite:///../workspace/data/DisasterResponse.db')
+    engine = create_engine('sqlite:///../disaster_response_pipeline/data/DisasterResponse.db')
     df = pd.read_sql_table('cleaned_messages', engine)
     
     # Tokenization
@@ -20,7 +20,7 @@ def main():
     
     print("...get top categories")
     # Top 10 categories
-    df_categories = df.iloc[:, 3:-2]
+    df_categories = df.iloc[:, 4:-2]
     category_count_df = pd.DataFrame(df_categories.apply(pd.Series.value_counts).iloc[1, :]).sort_values(by=1, ascending=False)
     category_count_df.to_sql('category_count_df', engine, index=False, if_exists="replace")
     

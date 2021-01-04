@@ -4,9 +4,19 @@
 
 Hi, welcome to this project. I created this repository as a part of the data science nanodegree on udacity.
 
-**Description**
+**Description and Results**
 
-The goal of the project is to classify messages collected in the context of disasters. These messages should then be assigned to a category, where each message can have multiple labels. For this purpose, ETL and ML pipelines should be combined. I have tested different classifiers from scikit-learn based on an average weighted F1 score compared with each other. I chose the AdaBoostClassifier, which is an ensemble algorithm that uses decision trees as a base estimator.
+The goal of the project is to classify messages collected in the context of disasters. These messages should then be assigned to a category, where each message can have multiple labels.
+
+For this purpose, ETL and ML pipelines should be combined. I have tested different classifiers from scikit-learn based on an average weighted F1 score compared with each other. I chose the AdaBoostClassifier, which is an ensemble algorithm that uses decision trees as a base estimator. I used GridSearch to tune several hyperparameters (max_depth of DecisionTrees and n_estimators). In addition to the tokenized messages, I used several custom features like WordCounter or TextLength. The model was able to achieve a weighted average F1 score of approximately 0.9428.
+
+However, the strong class imbalance must be considered when looking at the results. This is not uncommon with text data, but there are several approaches to tackle this imbalance:
+- You could try to figure out which messages are very similar. So they are not exactly duplicates but have the same semantic meaning (e.g. "We need food please" vs. "Please give us food")
+- You could use advanced methods like undersampling (drop data points from the majority class) or oversampling (replicate data points from the minority class)
+- Another advanced technique is data augmentation. This technique is very prominent computer vision. Here, you transform samples (e.g. mirroring images or add noise). With text data you could achieve this with adding word synonyms.
+- Get more data if you can
+
+You could also try to generate even more features or do more hyperparameter tuning. However, I believe that this would only lead to marginal improvements and - especially with hyperparameter tuning - would be computationally intensive.
 
 **Instructions**
 1. To get started clone this repository with 
