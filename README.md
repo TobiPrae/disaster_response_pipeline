@@ -17,6 +17,3 @@
     `python app/run.py`
 
 4. Go to http://0.0.0.0:3001/
-
-git remote add origin git@github.com:TobiPrae/disaster_response_pipeline
-git push -u origin main
