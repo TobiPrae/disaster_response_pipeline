@@ -46,6 +46,8 @@ Hi, welcome to this project. I created this repository as a part of the data sci
 
 The goal of the project is to classify messages collected in the context of disasters. These messages should then be assigned to a category, where each message can have multiple labels.
 
+![search](search.png)
+
 For this purpose, ETL and ML pipelines should be combined. I have tested different classifiers from scikit-learn based on an average weighted F1 score compared with each other. I chose the AdaBoostClassifier, which is an ensemble algorithm that uses decision trees as a base estimator. I used GridSearch to tune several hyperparameters (max_depth of DecisionTrees and n_estimators). In addition to the tokenized messages, I used several custom features like WordCounter or TextLength. The model was able to achieve a weighted average F1 score of approximately 0.9428.
 
 However, the strong class imbalance must be considered when looking at the results. This is not uncommon with text data, but there are several approaches to tackle this imbalance:
@@ -55,3 +57,7 @@ However, the strong class imbalance must be considered when looking at the resul
 - Get more data if you can
 
 You could also try to generate even more features or do more hyperparameter tuning. However, I believe that this would only lead to marginal improvements and - especially with hyperparameter tuning - would be computationally intensive.
+
+![plot1](plot1.png)
+
+![plot2](plot2.png)
