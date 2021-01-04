@@ -27,14 +27,20 @@ Hi, welcome to this project. I created this repository as a part of the data sci
 
 **Files** 
 
-| Name                   | Description                            | Folder|
-| ---------------------- |----------------------------------------| ------|
-| DisasterResponse.db    | Contains df for training and for plots | data  |
-| disaster_categories.csv| Contains message categories (labels)   | data  |
-| disaster_messages.csv  | Contains messages                      | data  |
-| prepare_plots.py       | Transforms data once for plots         | data  |
-| process_data.py        | Merge categories and messages          | data  |
-
+| Name                   | Description                                   | Folder   |
+| ---------------------- |-----------------------------------------------| ---------|
+| DisasterResponse.db    | Contains df for training and for plots        | data     |
+| disaster_categories.csv| Contains message categories (labels)          | data     |
+| disaster_messages.csv  | Contains messages                             | data     |
+| prepare_plots.py       | Transforms data once for plots                | data     |
+| process_data.py        | Merge categories and messages                 | data     |
+| classifier.pkl         | Trained AdaBoostClassifier                    | models   |
+| tokenizer.py           | Tokenizer function                            | models   |
+| train_classifier.py    | Trains new classifier using GridSearch        | models   |
+| README.md              | ReadMe Document                               | root     |
+| run.py                 | Used to run app                               | app      |
+| go.html                | Contains html logic for classification results| templates|
+| master.html            | Contains basic html logic for app             | templates|
 
 **Description and Results**
 
