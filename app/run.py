@@ -174,7 +174,7 @@ def tokenize(text):
     return clean_tokens
 
 # load and prepare data
-engine = create_engine('sqlite:///../workspace/data/DisasterResponse.db')
+engine = create_engine('sqlite:///../disaster_response_pipeline/data/DisasterResponse.db')
 df = pd.read_sql_table('cleaned_messages', engine)
 
 # Number of categories per message
@@ -194,7 +194,7 @@ df_word_counts_aid = pd.read_sql_table('df_word_counts_aid', engine)
 df_word_counts_weather = pd.read_sql_table('df_word_counts_weather', engine) 
 
 # Load model
-model = joblib.load("../workspace/models/classifier.pkl")
+model = joblib.load("../disaster_response_pipeline/models/classifier.pkl")
 
 # index webpage displays cool visuals and receives user input text for model
 @app.route('/')
