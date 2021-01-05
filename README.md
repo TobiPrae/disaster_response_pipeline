@@ -10,6 +10,7 @@ Hi, welcome to this project. I created this repository as a part of the data sci
 
 2. Installations.
     - `pip install plotly==4.13.0`
+    - `pip install scikit-learn==0.19.1`
 
 3. Run the following commands in the project's root directory to set up your database and model.
 
