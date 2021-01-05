@@ -4,7 +4,7 @@
 
 Hi, welcome to this project. I created this repository as a part of the data science nanodegree on udacity.
 
-The goal of the project is to classify messages collected in the context of disasters. These messages should then be assigned to a category, where each message can have multiple labels. During disasters, a variety of messages are sent. However, in order to be able to provide targeted assistance, it is important to classify how acute the situation of those affected is and what exactly their concern is. For humans, it would be extremely time-consuming to make this classification. Machine learning makes it possible to immediately classify incoming messages and thus directly address specific organizations (e.g., fire departments or aid organizations).
+The goal of the project is to classify messages collected in the context of disasters. These messages should then be assigned to a category, where each message can have multiple labels (categories). During disasters, a variety of messages are sent. However, in order to be able to provide targeted assistance, it is important to classify how acute the situation of those affected is and what exactly their concern is. For humans, it would be extremely time-consuming to make this classification. Machine learning makes it possible to immediately classify incoming messages and thus directly address specific organizations (e.g., fire departments or aid organizations).
 
 ![search](search.png)
 
