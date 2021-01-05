@@ -27,6 +27,9 @@ from functools import partial
 # Custom transformers
 
 class WordCounter(BaseEstimator, TransformerMixin):
+    '''
+    Counts number of words in given text.
+    '''
     
     def fit(self, x, y=None):
         return self
@@ -37,7 +40,9 @@ class WordCounter(BaseEstimator, TransformerMixin):
 
     
 class CharCounter(BaseEstimator, TransformerMixin):
-    
+    '''
+    Counts number of chars in given text.
+    '''
     def fit(self, x, y=None):
         return self
     
@@ -47,7 +52,9 @@ class CharCounter(BaseEstimator, TransformerMixin):
 
 
 class UniqueWordCounter(BaseEstimator, TransformerMixin):
-
+    '''
+    Counts number of unique words in given text.
+    '''
     def fit(self, x, y=None):
         return self
     
@@ -57,7 +64,9 @@ class UniqueWordCounter(BaseEstimator, TransformerMixin):
 
     
 class TextLengthExtractor(BaseEstimator, TransformerMixin):
-    
+    '''
+    Extracts length for given text.
+    '''
     def fit(self, x, y=None):
         return self
     
@@ -67,7 +76,9 @@ class TextLengthExtractor(BaseEstimator, TransformerMixin):
 
 
 class CapitalCounter(BaseEstimator, TransformerMixin):
-    
+    '''
+    Counts number of capitals in given text.
+    '''
     def fit(self, x, y=None):
         return self
     
@@ -77,7 +88,9 @@ class CapitalCounter(BaseEstimator, TransformerMixin):
     
     
 class CapLengthRatio(BaseEstimator, TransformerMixin):
-    
+    '''
+    Compares text length to number of capiatls in given text.
+    '''
     def fit(self, x, y=None):
         return self
     
@@ -89,7 +102,9 @@ class CapLengthRatio(BaseEstimator, TransformerMixin):
     
     
 class SpecificWordCounter(BaseEstimator, TransformerMixin):
-    
+    '''
+    Counts the occurence of specific words in given text.
+    '''
     def __init__(self, word):
         self.word = word.lower()
     
@@ -102,7 +117,9 @@ class SpecificWordCounter(BaseEstimator, TransformerMixin):
 
    
 class SymbolCounter(BaseEstimator, TransformerMixin):
-    
+    '''
+    Counts the occurence of given symbols in given text.
+    '''
     def __init__(self, symbols):
         self.symbols = symbols
     
